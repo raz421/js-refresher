@@ -34,3 +34,12 @@ const fun = function () {
     console.log("hellow world ");
   };
 };
+
+// eventhandaller
+const buttan = document.getElementById("btn");
+
+function Buttonhandaller() {
+  alert("button clicked");
+}
+
+buttan.addEventListener("click", Buttonhandaller);
