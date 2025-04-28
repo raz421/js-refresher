@@ -9,18 +9,4 @@ const Student = {
     // },
   },
 };
-// const { name,id } = Student;
-// console.log(name, id);
-
-// nested destructuring
-
-//#1  const {
-//   skill: { skl1 },
-// } = Student;
-// console.log(skl1)
-
-// #2
-const {
-  skill: { more: { name } = {} },
-} = Student;
-console.log(name);
+console.log(Student?.skill?.more?.name);
