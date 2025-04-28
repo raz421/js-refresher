@@ -1,32 +1,36 @@
-// array methods
-// find
-// const num = ["mango", "pineapple", "watermelon", "guava"];
-// const ans = num.find((f) => f === "peach" || f === "guava");
-// // if it's true it's give result
+// array method
+// concat
+
+// const fruits = ["guava", "jackfruit", "watermelon", "peach"];
+// const res = fruits.concat("fruit 4", "fruit 5");
+// console.log(res);
+// console.log(fruits);
+
+//  push
+// const ans = fruits.push("blackvery");
+// // it's manupulate main arrray
+// console.log(ans);
+// console.log(fruits);
+
+// const num = [34, 67, 89, 90, 99, 77, 12];
+// const ans = num.filter((n) => n == 89 || n == 67);
+// console.log(ans);
+// console.log(num);
+
 // console.log(ans);
 
-//findIndex
-// const res = num.findIndex((f) => f === "pineapple");
-// // if it's true it's give result index
-// console.log(res);
+// map method
+// const ans = num.map((n) => n == 90);
+// console.log(num);
+// console.log(ans);
 
-// slice
-
-// const str = "Bangladesh is beatuifull country";
-// const slc = str.slice(0, 10);
-// console.log(slc);
-// console.log(str);
-
-// Slice another example
-// const num = [88, 99, 70, 30, 89, 99, 230, 80, 12, 34, 55, 667, 3];
-// const res = num.slice(0, 10);
-// console.log(res);
-
-// splice example
-const fruit = ["mango", "pineapple", "watermelon", "guava", "peach"];
-
-// const res=fruit.splice(startdeletenumber,how many remove,give value if any value need);
-
-const res = fruit.splice(2, 2, "jackfruit", "blckbery", "fruit3");
-console.log(res);
-console.log(fruit);
+const num = [1, 2, 4, 6, 7];
+const initialValue = 2;
+const ans = num.reduce((acc, curr, currIdx, arr) => {
+  console.log(`accumulator is ${acc}`);
+  console.log(`current value is ${curr}`);
+  console.log(`current index is ${currIdx}`);
+  console.log(`array is ${arr}`);
+  return acc + curr;
+}, initialValue);
+console.log(ans);
