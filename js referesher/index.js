@@ -1,36 +1,27 @@
-// array method
-// concat
+// for of and for in method
 
-// const fruits = ["guava", "jackfruit", "watermelon", "peach"];
-// const res = fruits.concat("fruit 4", "fruit 5");
-// console.log(res);
-// console.log(fruits);
+// for of use for ittarable and for in use for non ittarable or object
+// use of forof
+// const num = [12, 13, 14];
+// let sum = 0;
+// for (let n of num) {
+//   console.log(n);
+// }
+// const str = "Meharaz";
+// for (let s of str) {
+//   console.log(s);
+// }
 
-//  push
-// const ans = fruits.push("blackvery");
-// // it's manupulate main arrray
-// console.log(ans);
-// console.log(fruits);
+//use of forin
+let obj = {
+  name: "Meharaz",
+  id: "221 - 15 - 5883",
+  age: 25,
+};
+for (let key in obj) {
+    // here we cant access property like obj.key
+    // bexause obj.key	Always looks for a property named exactly "key" (not the variable's value).
+    // obj[key]	Looks for the property whose name is stored inside the key variable.
 
-// const num = [34, 67, 89, 90, 99, 77, 12];
-// const ans = num.filter((n) => n == 89 || n == 67);
-// console.log(ans);
-// console.log(num);
-
-// console.log(ans);
-
-// map method
-// const ans = num.map((n) => n == 90);
-// console.log(num);
-// console.log(ans);
-
-const num = [1, 2, 4, 6, 7];
-const initialValue = 2;
-const ans = num.reduce((acc, curr, currIdx, arr) => {
-  console.log(`accumulator is ${acc}`);
-  console.log(`current value is ${curr}`);
-  console.log(`current index is ${currIdx}`);
-  console.log(`array is ${arr}`);
-  return acc + curr;
-}, initialValue);
-console.log(ans);
+  console.log(obj[key]);
+}
