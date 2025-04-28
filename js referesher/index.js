@@ -1,12 +1,26 @@
-// truthy falsy value
-/*truthy means like a true falsy
-means like a false*/
-/* there are 6 type of truthy and falsy value present rest
-of other value is falsy*/
-// null,undefined,0,"",NaN,false
-const a = "";
-if (!a) {
-  console.log("the value is true");
-} else {
-  console.log("the value is false");
-}
+// destructuring
+const Student = {
+  name: "meharaz",
+  id: "221-15-5883",
+  skill: {
+    skl1: "development",
+    // more: {
+    //   name: "c++,c,rust,devopps",
+    // },
+  },
+};
+// const { name,id } = Student;
+// console.log(name, id);
+
+// nested destructuring
+
+//#1  const {
+//   skill: { skl1 },
+// } = Student;
+// console.log(skl1)
+
+// #2
+const {
+  skill: { more: { name } = {} },
+} = Student;
+console.log(name);
