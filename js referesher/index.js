@@ -1,45 +1,17 @@
-// function
-const a = function (b, c) {
-  return b + c;
-};
-console.log(a(6, 7));
+// primitive
+let a = "javascript";
+let b = "go lang";
+a = b;
+b = "typescript";
+console.log(a);
+console.log(b);
 
-//arrowfunction
-let multi = (a, b) => {
-  console.log("multification happend here");
-  return a * b;
-};
-console.log(multi(8, 9));
-
-// retun object in arrow function
-
-const obj = (a, b) => ({
-  a: a,
-  b: b,
-});
-console.log(obj(6, 7));
-
-// another way
-const obj2 = (a, b) => {
-  return {
-    a: a,
-    b: b,
-  };
-};
-console.log(obj2(10, 12));
-
-// annonymous function
-const fun = function () {
-  return () => {
-    console.log("hellow world ");
-  };
-};
-
-// eventhandaller
-const buttan = document.getElementById("btn");
-
-function Buttonhandaller() {
-  alert("button clicked");
-}
-
-buttan.addEventListener("click", Buttonhandaller);
+// refernce type value
+let arr1 = [99, 89, 87];
+let arr2 = [35, 46, 78];
+arr1 = arr2;
+console.log(arr1);
+console.log(arr2);
+arr2.push(99);
+console.log(arr1);
+console.log(arr2);
