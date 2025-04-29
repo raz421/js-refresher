@@ -1,15 +1,14 @@
-const inventory = [
-  { name: "cherry", quantity: "2kg" },
-  { name: "jackfruit", quantity: "5kg" },
-  { name: "strawbery", quantity: "7kg" },
-  { name: "strawbery", quantity: "4kg" },
-  { name: "strawbery", quantity: "3kg" },
-  { name: "apple", quantity: "7kg" },
-  { name: "orange", quantity: "7kg" },
-];
-function Fruit(f) {
-  const res = f.name === "strawbery";
-  return res;
-}
-const ans = inventory.find(Fruit);
-console.log(ans);
+// a positive number that is also less than it's neighbour find fist element
+const num = [33, -1, 23, 17, 13, 12];
+const res = num
+  .filter((val) => val > 0)
+  .find((val, index, arr) => {
+    if (index > 0 && val >= arr[index - 1]) {
+      return false;
+    }
+    if (index < arr.length - 1 && val >= arr[index + 1]) {
+      return false;
+    }
+    return true;
+  });
+console.log(res);
