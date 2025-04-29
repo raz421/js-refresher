@@ -1,11 +1,16 @@
-// uses of findIndex
-const arr = [1, 45, -2, 78, 90];
-const res = arr.filter((a) => a > 0).findIndex((a) => a > 50);
-console.log(res);
-const ans = arr.filter((a) => a > 0).findIndex((a) => a > 100);
-console.log(ans);
+// filter the prime number from an array
+const array = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
-// findindex in sparse array
-const arr1 = [2, 4, , , -1, -3, -5, 6, , 8];
-const res1 = arr1.filter((a) => a > 0).findIndex((a) => a > 7);
-console.log(res1);
+function PrimeNumber(num, idx, arr) {
+  if (num > 0) {
+    for (let i = 2; i < num; i++) {
+      if (num % i == 0) {
+        return false;
+      }
+      return true;
+    }
+  }
+}
+
+const res = array.filter(PrimeNumber);
+console.log(...res);
