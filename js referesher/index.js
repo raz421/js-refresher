@@ -1,23 +1,38 @@
-// in sorted compareable(array element must be pure)
-// they need to no change in campare function
-const stringArray = ["Blue", "Humpback", "Beluga"];
-const numberArray = [40, 1, 5, 200];
-const numericStringArray = ["80", "9", "700"];
-const mixedNumericArray = ["80", "9", "700", 40, 1, 5, 200];
-const compare = (a, b) => {
-  return a - b;
-};
-console.log(stringArray.join(","));
-console.log(stringArray.sort());
+// spread oparator apply in array object and function
+// in spread oparator here only 1 level copy perfectly
+// other level share refference,not fully copied
+// const Object = {
+//   name: "meharaz",
+//   id: "221-15-5883",
+//   address: {
+//     name: "dhaka",
+//   },
+// };
+// const Object2 = { ...Object };
+// Object2.name = "Rahim";
+// console.log(Object);
+// console.log(Object2);
+// Object2.address.name = "chitagong";
+// console.log(Object);
+// console.log(Object2);
+// here it copies only one layer
 
-console.log(numberArray.join(","));
-console.log(numberArray.sort());
-console.log(numberArray.sort(compare));
+// example
+// const arr = [1, 2, 3, 4];
+// const arr2 = [...arr];
+// console.log(arr);
+// console.log(arr2);
+// arr2.push(4);
+// console.log(arr);
+// console.log(arr2);
+// here it copy one level so two array change independently
 
-console.log(numericStringArray.join());
-console.log(numericStringArray.sort());
-console.log(numericStringArray.sort(compare));
-
-console.log(mixedNumericArray.join());
-console.log(mixedNumericArray.sort());
-console.log(mixedNumericArray.sort(compare));
+// combining array
+// const arr1 = [90, 89, 99, 90];
+// const arr2 = [94, 80, 995, 190];
+// const combine = [...arr1, ...arr2];
+// console.log(combine);
+// add spread with array element
+// const arr6 = [90, 80, 45, 35, 23];
+// const add = [23, 45, ...arr6];
+// console.log(add);
