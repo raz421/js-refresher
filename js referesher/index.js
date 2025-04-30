@@ -1,12 +1,14 @@
-// we can use conditionally spread oparator into object or array
-const iscondition = true;
-const arr = [12, 34, 56];
-const arr2 = [39, 90, 80, ...(iscondition ? arr : [])];
-console.log(arr2);
-
-const Student = {
-  name: "Meharaz",
-  id: "221-15-5883",
-  ...(iscondition ? { uni: "diu" } : {}),
+const nature = {
+  fellining: "good",
+  temp: {
+    value: {
+      int: 24,
+    },
+  },
 };
-console.log(Student);
+const {
+  temp: {
+    value: { int },
+  },
+} = nature;
+console.log(int);
