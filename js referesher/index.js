@@ -1,8 +1,23 @@
-/* if initial value is provide the itaration start from 
-0 index,if intial value is not provided 0 index value use
-as a inital value and first itaration is start from index
-1*/
-const arr = [7, 34, 45, 89, 90, 56];
+// in sorted compareable(array element must be pure)
+// they need to no change in campare function
+const stringArray = ["Blue", "Humpback", "Beluga"];
+const numberArray = [40, 1, 5, 200];
+const numericStringArray = ["80", "9", "700"];
+const mixedNumericArray = ["80", "9", "700", 40, 1, 5, 200];
+const compare = (a, b) => {
+  return a - b;
+};
+console.log(stringArray.join(","));
+console.log(stringArray.sort());
 
-const ans = arr.reduce((acc, curr) => Math.max(acc, curr));
-console.log(ans);
+console.log(numberArray.join(","));
+console.log(numberArray.sort());
+console.log(numberArray.sort(compare));
+
+console.log(numericStringArray.join());
+console.log(numericStringArray.sort());
+console.log(numericStringArray.sort(compare));
+
+console.log(mixedNumericArray.join());
+console.log(mixedNumericArray.sort());
+console.log(mixedNumericArray.sort(compare));
